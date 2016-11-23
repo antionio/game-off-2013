@@ -81,7 +81,29 @@ public class Assets {
 	public static TextureRegion[] fontBigWhite;
 	public static TextureRegion[] fontSmallBlack;
 	public static TextureRegion[] fontSmallWhite;
+	
 
+	public static Animation batWalkFront;
+	public static Animation batWalkBack;
+	public static Animation batWalkLeft;
+	public static Animation batWalkRight;
+	
+	public static Animation zombieWalkFront;
+	public static Animation zombieWalkBack;
+	public static Animation zombieWalkLeft;
+	public static Animation zombieWalkRight;
+	
+	public static Animation skeletonWalkFront;
+	public static Animation skeletonWalkBack;
+	public static Animation skeletonWalkLeft;
+	public static Animation skeletonWalkRight;
+	
+	public static Animation ghostWalkFront;
+	public static Animation ghostWalkBack;
+	public static Animation ghostWalkLeft;
+	public static Animation ghostWalkRight;
+
+	
 	public static Animation mummyWalkFront;
 	public static Animation mummyWalkBack;
 	public static Animation mummyWalkLeft;
@@ -207,6 +229,57 @@ public class Assets {
 				Texture.class)).split(4, 4)[0];
 		fontSmallWhite = new TextureRegion(get(TEXTURE_FONT_SMALL_WHITE,
 				Texture.class)).split(4, 4)[0];
+		
+
+		batWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("bat1"), getGameObject("bat2"),
+				getGameObject("bat3") });
+		batWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("bat7"), getGameObject("bat8"),
+				getGameObject("bat9") });
+
+		final TextureRegion[] batLeftRegions = new TextureRegion[] {
+				getGameObject("bat4"), getGameObject("bat5"),
+				getGameObject("bat6") };
+		batWalkLeft = new Animation(0.1f, batLeftRegions);
+		batWalkRight = new Animation(0.1f,
+				flipRegionsHorizontally(batLeftRegions));
+		
+		zombieWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("zombie3"), getGameObject("zombie4")});
+		zombieWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("zombieq"), getGameObject("zombie2")});
+
+		final TextureRegion[] zombieLeftRegions = new TextureRegion[] {
+				getGameObject("zombie5"), getGameObject("zombie6")};
+		zombieWalkRight = new Animation(0.1f, zombieLeftRegions);
+		zombieWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(zombieLeftRegions));
+		
+		skeletonWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("skeleton3"), getGameObject("skeleton4")});
+		skeletonWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("skeleton1"), getGameObject("skeleton2")});
+
+		final TextureRegion[] skeletonLeftRegions = new TextureRegion[] {
+				getGameObject("skeleton5"), getGameObject("skeleton6")};
+		skeletonWalkRight = new Animation(0.1f, skeletonLeftRegions);
+		skeletonWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(skeletonLeftRegions));
+		
+		ghostWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("ghost3"), getGameObject("ghost4")});
+		ghostWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("ghost1"), getGameObject("ghost2")});
+
+		final TextureRegion[] ghostLeftRegions = new TextureRegion[] {
+				getGameObject("ghost5"), getGameObject("ghost6")};
+		ghostWalkRight = new Animation(0.1f, ghostLeftRegions);
+		ghostWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(ghostLeftRegions));
+		
+		
+		
 
 		mummyWalkFront = new Animation(0.2f,
 				new TextureRegion[] { getGameObject("mummy-front-1"),

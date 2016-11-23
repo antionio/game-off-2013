@@ -13,27 +13,31 @@
    limitations under the License. */
 package com.sturdyhelmetgames.roomforchange.level;
 
-import aurelienribon.tweenengine.TweenManager;
-
 import com.badlogic.gdx.graphics.g2d.ParticleEffectPool.PooledEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
+import com.sturdyhelmetgames.roomforchange.entity.Bat;
 import com.sturdyhelmetgames.roomforchange.entity.Entity;
 import com.sturdyhelmetgames.roomforchange.entity.Exit;
 import com.sturdyhelmetgames.roomforchange.entity.Gem;
+import com.sturdyhelmetgames.roomforchange.entity.Ghost;
 import com.sturdyhelmetgames.roomforchange.entity.KingSpider;
 import com.sturdyhelmetgames.roomforchange.entity.Mummy;
 import com.sturdyhelmetgames.roomforchange.entity.Player;
 import com.sturdyhelmetgames.roomforchange.entity.Scroll;
+import com.sturdyhelmetgames.roomforchange.entity.Skeleton;
 import com.sturdyhelmetgames.roomforchange.entity.Snake;
 import com.sturdyhelmetgames.roomforchange.entity.Spider;
 import com.sturdyhelmetgames.roomforchange.entity.Talisman;
+import com.sturdyhelmetgames.roomforchange.entity.Zombie;
 import com.sturdyhelmetgames.roomforchange.level.LabyrinthPiece.LabyrinthPieceState;
 import com.sturdyhelmetgames.roomforchange.screen.GameScreen;
 import com.sturdyhelmetgames.roomforchange.util.LabyrinthUtil;
+
+import aurelienribon.tweenengine.TweenManager;
 
 public class Level {
 
@@ -398,6 +402,7 @@ public class Level {
 			final float randomY = currentPieceRelativePos.y + 1
 					+ MathUtils.random(5);
 			final Class<?> entityType = template.getEntityTypes().get(i);
+						
 			if (entityType == Mummy.class) {
 				entities.add(new Mummy(randomX, randomY, this));
 			} else if (entityType == Snake.class) {
@@ -406,7 +411,16 @@ public class Level {
 				entities.add(new Spider(randomX, randomY, this));
 			} else if (entityType == KingSpider.class) {
 				entities.add(new KingSpider(randomX, randomY, this));
+			} else if (entityType == Bat.class) {
+				entities.add(new Bat(randomX, randomY, this));
+			} else if (entityType == Zombie.class) {
+				entities.add(new Zombie(randomX, randomY, this));
+			} else if (entityType == Skeleton.class) {
+				entities.add(new Skeleton(randomX, randomY, this));
+			} else if (entityType == Ghost.class) {
+				entities.add(new Ghost(randomX, randomY, this));
 			}
+				
 		}
 
 		final float randomX = currentPieceRelativePos.x + 2

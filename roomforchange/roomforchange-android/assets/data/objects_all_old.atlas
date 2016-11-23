@@ -10,69 +10,6 @@ Frame
   orig: 18, 18
   offset: 0, 0
   index: -1
-bat1
-  rotate: false
-  xy: 449, 247
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat2
-  rotate: false
-  xy: 467, 247
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat3
-  rotate: false
-  xy: 485, 247
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat4
-  rotate: false
-  xy: 449, 265
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat5
-  rotate: false
-  xy: 467, 265
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat6
-  rotate: false
-  xy: 485, 265
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat7
-  rotate: false
-  xy: 449, 283
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat8
-  rotate: false
-  xy: 467, 283
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-bat9
-  rotate: false
-  xy: 485, 283
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
 black
   rotate: false
   xy: 279, 121
@@ -176,55 +113,6 @@ gem
   xy: 485, 229
   size: 18, 18
   orig: 18, 18
-  offset: 0, 0
-  index: -1
-ghost0
-  rotate: false
-  xy: 425, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost1
-  rotate: false
-  xy: 329, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost2
-  rotate: false
-  xy: 345, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost3
-  rotate: false
-  xy: 361, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost4
-  rotate: false
-  xy: 377, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost5
-  rotate: false
-  xy: 393, 286
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-ghost6
-  rotate: false
-  xy: 409, 286
-  size: 16, 16
-  orig: 16, 16
   offset: 0, 0
   index: -1
 ground-1
@@ -647,55 +535,6 @@ scroll
   orig: 18, 18
   offset: 0, 0
   index: -1
-skeleton0
-  rotate: false
-  xy: 425, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton1
-  rotate: false
-  xy: 329, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton2
-  rotate: false
-  xy: 345, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton3
-  rotate: false
-  xy: 361, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton4
-  rotate: false
-  xy: 377, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton5
-  rotate: false
-  xy: 393, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-skeleton6
-  rotate: false
-  xy: 409, 268
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
 snake-back-1
   rotate: false
   xy: 411, 97
@@ -794,73 +633,10 @@ talisman
   orig: 18, 18
   offset: 0, 0
   index: -1
-ui-id-184
-  rotate: false
-  xy: 279, 179
-  size: 64, 32
-  orig: 64, 32
-  offset: 0, 0
-  index: -1
-ui-id-397
-  rotate: false
-  xy: 279, 179
-  size: 64, 32
-  orig: 64, 32
-  offset: 0, 0
-  index: -1
 win
   rotate: false
   xy: 279, 179
   size: 64, 32
   orig: 64, 32
-  offset: 0, 0
-  index: -1
-zombie0
-  rotate: false
-  xy: 425, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie2
-  rotate: false
-  xy: 345, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie3
-  rotate: false
-  xy: 361, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie4
-  rotate: false
-  xy: 377, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie5
-  rotate: false
-  xy: 393, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie6
-  rotate: false
-  xy: 409, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombieq
-  rotate: false
-  xy: 329, 249
-  size: 16, 16
-  orig: 16, 16
   offset: 0, 0
   index: -1
