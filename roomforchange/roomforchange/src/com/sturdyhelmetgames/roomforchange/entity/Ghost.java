@@ -13,12 +13,14 @@
    limitations under the License. */
 package com.sturdyhelmetgames.roomforchange.entity;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
 import com.sturdyhelmetgames.roomforchange.level.Level;
+import com.sturdyhelmetgames.roomforchange.level.Level.LevelTile;
 
 public class Ghost extends Enemy {
 	
@@ -56,6 +58,80 @@ public class Ghost extends Enemy {
 
 			batch.draw(animation.getKeyFrame(stateTime, true), bounds.x - 0.1f,
 					bounds.y - 0.1f, width, height);
+		}
+	}
+	
+	@Override
+	protected void fetchCollidableRects() {
+		int p1x = (int) bounds.x;
+		int p1y = (int) Math.floor(bounds.y);
+		int p2x = (int) (bounds.x + bounds.width);
+		int p2y = (int) Math.floor(bounds.y);
+		int p3x = (int) (bounds.x + bounds.width);
+		int p3y = (int) (bounds.y + bounds.height);
+		int p4x = (int) bounds.x;
+		int p4y = (int) (bounds.y + bounds.height);
+
+		try {
+			LevelTile tile1 = null;
+			if (level.getTiles().length >= p1x && p1x >= 0
+					&& level.getTiles()[p1x].length >= p1y && p1y >= 0)
+				tile1 = level.getTiles()[p1x][p1y];
+			LevelTile tile2 = null;
+			if (level.getTiles().length >= p2x && p1x >= 0
+					&& level.getTiles()[p2x].length >= p2y && p2y >= 0)
+				tile2 = level.getTiles()[p2x][p2y];
+			LevelTile tile3 = null;
+			if (level.getTiles().length >= p3x && p3x >= 0
+					&& level.getTiles()[p3x].length >= p3y && p3y >= 0)
+				tile3 = level.getTiles()[p3x][p3y];
+			LevelTile tile4 = null;
+			if (level.getTiles().length >= p4x && p4x >= 0
+					&& level.getTiles()[p4x].length >= p4y && p4y >= 0)
+				tile4 = level.getTiles()[p4x][p4y];
+
+			if (tile1 != null)
+				holes[0].set(p1x + 0.4f, p1y + 0.5f, 0.2f, 0.05f);
+			else
+				holes[0].unset();
+			if (tile1 != null && !tile1.type.isNotWall()) {
+				r[0].set(p1x, p1y, 1, 1);
+			} else {
+				r[0].set(-1, -1, 0, 0);
+			}
+
+			if (tile2 != null)
+				holes[1].set(p2x + 0.4f, p2y + 0.5f, 0.2f, 0.05f);
+			else
+				holes[1].unset();
+			if (tile2 != null && !tile2.type.isNotWall()) {
+				r[1].set(p2x, p2y, 1, 1);
+			} else {
+				r[1].set(-1, -1, 0, 0);
+			}
+
+			if (tile3 != null)
+				holes[2].set(p3x + 0.4f, p3y + 0.5f, 0.2f, 0.05f);
+			else
+				holes[2].unset();
+			if (tile3 != null && !tile3.type.isNotWall()) {
+				r[2].set(p3x, p3y, 1, 1);
+
+			} else {
+				r[2].set(-1, -1, 0, 0);
+			}
+
+			if (tile4 != null)
+				holes[3].set(p4x + 0.4f, p4y + 0.5f, 0.2f, 0.05f);
+			else
+				holes[3].unset();
+			if (tile4 != null && !tile4.type.isNotWall()) {
+				r[3].set(p4x, p4y, 1, 1);
+			} else {
+				r[3].set(-1, -1, 0, 0);
+			}
+		} catch (ArrayIndexOutOfBoundsException e) {
+			Gdx.app.log("Creature", "Creature went off screen");
 		}
 	}
 

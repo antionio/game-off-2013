@@ -78,12 +78,13 @@ public class RoomTemplate {
 		}
 
 		// randomize room difficulty level
-		int difficultyLevel = MathUtils.random(3)+1;
+		int difficultyLevel = MathUtils.random(3)+2;
 		if (difficultyLevel == 1) {
 			difficultyLevel = 1;
 		}
 		for (int i = 0; i < difficultyLevel; i++) {
 			final int enemyType = MathUtils.random(100);
+
 			if (enemyType < 15) {
 				entityTypes.add(Snake.class);
 			} else if (enemyType < 25) {
