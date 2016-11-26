@@ -17,9 +17,11 @@ import com.badlogic.gdx.math.MathUtils;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
 import com.sturdyhelmetgames.roomforchange.entity.Exit;
 import com.sturdyhelmetgames.roomforchange.entity.Gem;
+import com.sturdyhelmetgames.roomforchange.entity.Pharao;
 import com.sturdyhelmetgames.roomforchange.entity.Player;
 import com.sturdyhelmetgames.roomforchange.entity.Scroll;
 import com.sturdyhelmetgames.roomforchange.entity.Talisman;
+import com.sturdyhelmetgames.roomforchange.entity.Thief;
 import com.sturdyhelmetgames.roomforchange.level.LabyrinthPiece;
 import com.sturdyhelmetgames.roomforchange.level.LabyrinthPiece.LabyrinthPieceState;
 import com.sturdyhelmetgames.roomforchange.level.Level;
@@ -27,6 +29,7 @@ import com.sturdyhelmetgames.roomforchange.level.Level.LevelTile;
 import com.sturdyhelmetgames.roomforchange.level.Level.LevelTileType;
 import com.sturdyhelmetgames.roomforchange.level.PieceTemplate;
 import com.sturdyhelmetgames.roomforchange.screen.GameScreen;
+import com.sturdyhelmetgames.roomforchange.screen.MenuScreen;
 
 public class LabyrinthUtil {
 
@@ -71,7 +74,12 @@ public class LabyrinthUtil {
 
 		level.getLabyrinth()[0][0].state = LabyrinthPieceState.LIGHTS_ON;
 
-		level.player = new Player(4, 1, level);
+		if (MenuScreen.character == 1)
+			level.player = new Thief(4, 1, level);
+		else if (MenuScreen.character == 2)
+			level.player = new Pharao(4, 1, level);
+		else
+			level.player = new Player(4, 1, level);
 		level.entities.add(level.player);
 		level.entities.add(new Exit(3, 1, level));
 

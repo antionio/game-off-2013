@@ -44,37 +44,15 @@ public class Player extends Entity {
 	public void render(float delta, SpriteBatch batch) {
 		super.render(delta, batch);
 
-		Animation animation = null;
-
 		if (blinkTick < BLINK_TICK_MAX) {
-			if (isFalling()) {
-				animation = Assets.playerFalling;
-				batch.draw(animation.getKeyFrame(dyingAnimState),
-						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-			} else if (isDying() || isDead()) {
-				animation = Assets.playerDying;
-				batch.draw(animation.getKeyFrame(dyingAnimState),
-						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-			} else {
-				if (direction == Direction.UP) {
-					animation = Assets.playerWalkBack;
-				} else if (direction == Direction.DOWN) {
-					animation = Assets.playerWalkFront;
-				} else if (direction == Direction.RIGHT) {
-					animation = Assets.playerWalkRight;
-				} else if (direction == Direction.LEFT) {
-					animation = Assets.playerWalkLeft;
-				}
-				if (isNotWalking()) {
-					batch.draw(animation.getKeyFrame(0.25f), bounds.x - 0.1f,
-							bounds.y, width, height + 0.4f);
-				} else {
-					batch.draw(animation.getKeyFrame(stateTime, true),
-							bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-				}
-			}
+			drawPlayer(batch);
 		}
 
+		drawAttack(batch);
+
+	}
+	
+	public void drawAttack(SpriteBatch batch) {
 		if (tryHitTime < 0.3) {
 			float rotation = 0f;
 			float x = this.bounds.x;
@@ -94,7 +72,37 @@ public class Player extends Entity {
 			batch.draw(Assets.hitTarget.getKeyFrame(tryHitTime, true), x, y,
 					1f / 2, 1f / 2, 1f, 1f, 1f, 1f, rotation);
 		}
+	}
 
+	public void drawPlayer(SpriteBatch batch){
+		Animation animation = null;
+		
+		if (isFalling()) {
+			animation = Assets.playerFalling;
+			batch.draw(animation.getKeyFrame(dyingAnimState),
+					bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+		} else if (isDying() || isDead()) {
+			animation = Assets.playerDying;
+			batch.draw(animation.getKeyFrame(dyingAnimState),
+					bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+		} else {
+			if (direction == Direction.UP) {
+				animation = Assets.playerWalkBack;
+			} else if (direction == Direction.DOWN) {
+				animation = Assets.playerWalkFront;
+			} else if (direction == Direction.RIGHT) {
+				animation = Assets.playerWalkRight;
+			} else if (direction == Direction.LEFT) {
+				animation = Assets.playerWalkLeft;
+			}
+			if (isNotWalking()) {
+				batch.draw(animation.getKeyFrame(0.25f), bounds.x - 0.1f,
+						bounds.y, width, height + 0.4f);
+			} else {
+				batch.draw(animation.getKeyFrame(stateTime, true),
+						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+			}
+		}
 	}
 
 	@Override
@@ -157,7 +165,7 @@ public class Player extends Entity {
 		}
 	}
 
-	private void tryHitLever(int x, int y) {
+	protected void tryHitLever(int x, int y) {
 		LevelTile tile = level.getTiles()[x][y];
 		if (tile.type == Level.LevelTileType.LEVER) {
 			level.gameScreen.openLeverScreen();

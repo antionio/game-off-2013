@@ -164,6 +164,34 @@ exit
   orig: 18, 18
   offset: 0, 0
   index: -1
+fire-f1
+  rotate: false
+  xy: 148, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-f2
+  rotate: false
+  xy: 164, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-l1
+  rotate: false
+  xy: 180, 246
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-l2
+  rotate: false
+  xy: 180, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 gameover
   rotate: false
   xy: 279, 215
@@ -500,6 +528,69 @@ mummy-left-4
   orig: 18, 18
   offset: 0, 0
   index: -1
+pharao-b1
+  rotate: false
+  xy: 247, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-b2
+  rotate: false
+  xy: 263, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-dead
+  rotate: false
+  xy: 311, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-f1
+  rotate: false
+  xy: 215, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-f2
+  rotate: false
+  xy: 231, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-r1
+  rotate: false
+  xy: 279, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-r2
+  rotate: false
+  xy: 295, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-b1
+  rotate: false
+  xy: 246, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-b2
+  rotate: false
+  xy: 262, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 player-back-1
   rotate: false
   xy: 471, 185
@@ -519,6 +610,13 @@ player-back-idle
   xy: 449, 163
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-dead
+  rotate: false
+  xy: 310, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-dying-1
@@ -554,6 +652,20 @@ player-dying-5
   xy: 323, 135
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-f1
+  rotate: false
+  xy: 214, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-f2
+  rotate: false
+  xy: 230, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-falling-1
@@ -598,6 +710,13 @@ player-front-idle
   orig: 18, 18
   offset: 0, 0
   index: -1
+player-knife
+  rotate: false
+  xy: 132, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 player-left-1
   rotate: false
   xy: 367, 105
@@ -610,6 +729,20 @@ player-left-2
   xy: 389, 127
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-r1
+  rotate: false
+  xy: 278, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-r2
+  rotate: false
+  xy: 294, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-right-1
@@ -628,7 +761,7 @@ player-right-2
   index: -1
 pyramid
   rotate: false
-  xy: 4, 70
+  xy: 5, 69
   size: 271, 177
   orig: 271, 177
   offset: 0, 0
@@ -801,11 +934,25 @@ ui-id-184
   orig: 64, 32
   offset: 0, 0
   index: -1
+ui-id-248
+  rotate: false
+  xy: 329, 249
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 ui-id-397
   rotate: false
   xy: 279, 179
   size: 64, 32
   orig: 64, 32
+  offset: 0, 0
+  index: -1
+ui-id-397
+  rotate: false
+  xy: 329, 249
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 win
