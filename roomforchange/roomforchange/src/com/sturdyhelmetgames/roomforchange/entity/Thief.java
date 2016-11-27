@@ -9,7 +9,13 @@ public class Thief extends Player {
 
 	public Thief(float x, float y, Level level) {
 		super(x, y, level);
-		
+
+		this.health = 2;
+		this.maxHealth = 2;
+	}
+	
+	public float getMaxVelocity() {
+		return 0.06f;
 	}
 	
 	@Override

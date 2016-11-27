@@ -6,10 +6,16 @@ import com.sturdyhelmetgames.roomforchange.assets.Assets;
 import com.sturdyhelmetgames.roomforchange.level.Level;
 
 public class Pharao extends Player {
-
+	
 	public Pharao(float x, float y, Level level) {
 		super(x, y, level);
 		
+		this.health = 3;
+		this.maxHealth = 3;
+	}
+	
+	public float getMaxVelocity() {
+		return 0.04f;
 	}
 	
 	@Override
