@@ -126,7 +126,6 @@ public class Player extends Entity {
 	}
 
 	private static final float HIT_DISTANCE = 0.5f;
-	private final Rectangle leverRect = new Rectangle();
 
 	public void tryHit() {
 		if (!isDying() && !isDead() && !isFalling()) {

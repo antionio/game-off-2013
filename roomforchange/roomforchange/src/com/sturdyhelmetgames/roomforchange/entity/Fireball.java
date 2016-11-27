@@ -1,5 +1,6 @@
 package com.sturdyhelmetgames.roomforchange.entity;
 
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
@@ -53,8 +54,21 @@ public class Fireball extends Entity {
 
 		if (blinkTick < BLINK_TICK_MAX) {
 			super.render(delta, batch);
+			
+			Animation animation = null;
+			
+			if (direction == Direction.UP) {
+				animation = Assets.pharaoFireUp;
+			} else if (direction == Direction.DOWN) {
+				animation = Assets.pharaoFireDown;
+			} else if (direction == Direction.RIGHT) {
+				animation = Assets.pharaoFireRight;
+			} else if (direction == Direction.LEFT) {
+				animation = Assets.pharaoFireLeft;
+			}
 		
-			batch.draw(Assets.pharaoFireLeft.getKeyFrame(stateTime), bounds.x,
+			if (animation != null)
+				batch.draw(animation.getKeyFrame(stateTime), bounds.x,
 				bounds.y, width, height);
 		}
 

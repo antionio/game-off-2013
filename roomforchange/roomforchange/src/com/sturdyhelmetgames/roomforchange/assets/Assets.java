@@ -272,7 +272,7 @@ public class Assets {
 		zombieWalkFront = new Animation(0.1f, new TextureRegion[] {
 				getGameObject("zombie3"), getGameObject("zombie4")});
 		zombieWalkBack = new Animation(0.1f, new TextureRegion[] {
-				getGameObject("zombieq"), getGameObject("zombie2")});
+				getGameObject("zombie1"), getGameObject("zombie2")});
 
 		final TextureRegion[] zombieLeftRegions = new TextureRegion[] {
 				getGameObject("zombie5"), getGameObject("zombie6")};
@@ -390,6 +390,8 @@ public class Assets {
 		thiefKnifeLeft = new Animation(1f, new TextureRegion[] {getGameObject("player-knife")});
 		thiefKnifeRight = new Animation(1f, flipRegionsHorizontally(
 				new TextureRegion[] {getGameObject("player-knife")}));
+		thiefKnifeUp = new Animation(1f, new TextureRegion[] {getGameObject("player-knife-u")});
+		thiefKnifeDown = new Animation(1f, new TextureRegion[] {getGameObject("player-knife-d")});
 		
 		
 		pharaoWalkFront = new Animation(0.15f, new TextureRegion[] {
@@ -414,6 +416,13 @@ public class Assets {
 		
 		pharaoFireLeft = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-l1"), getGameObject("fire-l2")});
 		pharaoFireLeft.setPlayMode(Animation.LOOP);
+		pharaoFireRight = new Animation(0.1f, flipRegionsHorizontally(
+				new TextureRegion[] {getGameObject("fire-l1"), getGameObject("fire-l2")}));
+		pharaoFireRight.setPlayMode(Animation.LOOP);
+		pharaoFireDown = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-f1"), getGameObject("fire-f2")});
+		pharaoFireDown.setPlayMode(Animation.LOOP);
+		pharaoFireUp = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-b1"), getGameObject("fire-b2")});
+		pharaoFireUp.setPlayMode(Animation.LOOP);
 		
 
 		spiderFront = new Animation(0.2f, new TextureRegion[] {

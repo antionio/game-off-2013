@@ -1,4 +1,3 @@
-
 objects_all.png
 format: RGBA8888
 filter: Nearest,Nearest
@@ -164,6 +163,20 @@ exit
   orig: 18, 18
   offset: 0, 0
   index: -1
+fire-b1
+  rotate: false
+  xy: 178, 311
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-b2
+  rotate: false
+  xy: 194, 311
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 fire-f1
   rotate: false
   xy: 148, 262
@@ -208,49 +221,49 @@ gem
   index: -1
 ghost0
   rotate: false
-  xy: 425, 286
+  xy: 424, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost1
   rotate: false
-  xy: 329, 286
+  xy: 328, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost2
   rotate: false
-  xy: 345, 286
+  xy: 344, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost3
   rotate: false
-  xy: 361, 286
+  xy: 360, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost4
   rotate: false
-  xy: 377, 286
+  xy: 376, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost5
   rotate: false
-  xy: 393, 286
+  xy: 392, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 ghost6
   rotate: false
-  xy: 409, 286
+  xy: 408, 285
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
@@ -712,7 +725,21 @@ player-front-idle
   index: -1
 player-knife
   rotate: false
-  xy: 132, 250
+  xy: 104, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-knife-d
+  rotate: false
+  xy: 134, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-knife-u
+  rotate: false
+  xy: 88, 250
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
@@ -761,7 +788,7 @@ player-right-2
   index: -1
 pyramid
   rotate: false
-  xy: 5, 69
+  xy: 4, 70
   size: 271, 177
   orig: 271, 177
   offset: 0, 0
@@ -782,49 +809,49 @@ scroll
   index: -1
 skeleton0
   rotate: false
-  xy: 425, 268
+  xy: 424, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton1
   rotate: false
-  xy: 329, 268
+  xy: 328, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton2
   rotate: false
-  xy: 345, 268
+  xy: 344, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton3
   rotate: false
-  xy: 361, 268
+  xy: 360, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton4
   rotate: false
-  xy: 377, 268
+  xy: 376, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton5
   rotate: false
-  xy: 393, 268
+  xy: 392, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton6
   rotate: false
-  xy: 409, 268
+  xy: 408, 267
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
@@ -934,25 +961,11 @@ ui-id-184
   orig: 64, 32
   offset: 0, 0
   index: -1
-ui-id-248
-  rotate: false
-  xy: 329, 249
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
 ui-id-397
   rotate: false
   xy: 279, 179
   size: 64, 32
   orig: 64, 32
-  offset: 0, 0
-  index: -1
-ui-id-397
-  rotate: false
-  xy: 329, 249
-  size: 16, 16
-  orig: 16, 16
   offset: 0, 0
   index: -1
 win
@@ -964,49 +977,49 @@ win
   index: -1
 zombie0
   rotate: false
-  xy: 425, 249
+  xy: 424, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie2
   rotate: false
-  xy: 345, 249
+  xy: 344, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie3
   rotate: false
-  xy: 361, 249
+  xy: 360, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie4
   rotate: false
-  xy: 377, 249
+  xy: 376, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie5
   rotate: false
-  xy: 393, 249
+  xy: 392, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie6
   rotate: false
-  xy: 409, 249
+  xy: 408, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
-zombieq
+zombie1
   rotate: false
-  xy: 329, 249
+  xy: 328, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0

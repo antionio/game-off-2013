@@ -1,5 +1,6 @@
 package com.sturdyhelmetgames.roomforchange.entity;
 
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
@@ -53,9 +54,21 @@ public class Knife extends Entity {
 
 		if (blinkTick < BLINK_TICK_MAX) {
 			super.render(delta, batch);
+			
+			Animation animation = null;
+			
+			if (direction == Direction.UP) {
+				animation = Assets.thiefKnifeUp;
+			} else if (direction == Direction.DOWN) {
+				animation = Assets.thiefKnifeDown;
+			} else if (direction == Direction.RIGHT) {
+				animation = Assets.thiefKnifeRight;
+			} else if (direction == Direction.LEFT) {
+				animation = Assets.thiefKnifeLeft;
+			}
 		
-			batch.draw(Assets.thiefKnifeLeft.getKeyFrame(0f), bounds.x,
-				bounds.y, width, height);
+			if (animation != null)
+				batch.draw(animation.getKeyFrame(0f), bounds.x, bounds.y, width, height);
 		}
 
 	}

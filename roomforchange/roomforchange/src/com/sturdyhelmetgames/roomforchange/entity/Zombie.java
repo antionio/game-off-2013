@@ -18,6 +18,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.sturdyhelmetgames.roomforchange.assets.Assets;
+import com.sturdyhelmetgames.roomforchange.entity.Entity.Direction;
 import com.sturdyhelmetgames.roomforchange.level.Level;
 
 public class Zombie extends Enemy {
@@ -108,17 +109,31 @@ public class Zombie extends Enemy {
 		float absVelX = Math.abs(vel.x);
 		float absVelY = Math.abs(vel.y);
 
-		if (absVelX >= absVelY) {
+		if (absVelX > absVelY) {
 			if (vel.x <= 0f) {
 				direction = Direction.LEFT;
 			} else if (vel.x >= 0f) {
 				direction = Direction.RIGHT;
 			}
-		} else {
+		} else if (absVelX < absVelY) {
 			if (vel.y <= 0f) {
 				direction = Direction.DOWN;
 			} else if (vel.y >= 0f) {
 				direction = Direction.UP;
+			}
+		} else {
+			if (direction == Direction.LEFT || direction == Direction.RIGHT) {
+				if (vel.x <= 0f) {
+					direction = Direction.LEFT;
+				} else if (vel.x >= 0f) {
+					direction = Direction.RIGHT;
+				}
+			} else {
+				if (vel.y <= 0f) {
+					direction = Direction.DOWN;
+				} else if (vel.y >= 0f) {
+					direction = Direction.UP;
+				}
 			}
 		}
 	}
