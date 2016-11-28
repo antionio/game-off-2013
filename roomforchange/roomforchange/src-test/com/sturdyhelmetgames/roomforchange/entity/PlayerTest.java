@@ -73,4 +73,22 @@ public class PlayerTest {
 		
 		Assert.assertTrue(player.state == EntityState.FALLING);
     }
+	
+	@Test
+    public void drawPlayerDying() {
+		Player player = new Player(0, 0, level);
+		player.state = EntityState.DYING;
+		player.drawPlayer(spriteBatch);
+		
+		Assert.assertTrue(player.state == EntityState.DYING);
+    }
+    
+    @Test
+    public void drawPlayerWalking() {
+		Player player = new Player(0, 0, level);
+		player.state = EntityState.WALKING;
+		player.drawPlayer(spriteBatch);
+		
+		Assert.assertTrue(player.state == EntityState.WALKING);
+    }
 }
