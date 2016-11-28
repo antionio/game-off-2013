@@ -954,18 +954,18 @@ talisman
   orig: 18, 18
   offset: 0, 0
   index: -1
-ui-id-184
+key-left
   rotate: false
-  xy: 279, 179
-  size: 64, 32
-  orig: 64, 32
+  xy: 99, 85
+  size: 8, 7
+  orig: 8, 7
   offset: 0, 0
   index: -1
-ui-id-397
+key-right
   rotate: false
-  xy: 279, 179
-  size: 64, 32
-  orig: 64, 32
+  xy: 106, 85
+  size: 8, 7
+  orig: 8, 7
   offset: 0, 0
   index: -1
 win
