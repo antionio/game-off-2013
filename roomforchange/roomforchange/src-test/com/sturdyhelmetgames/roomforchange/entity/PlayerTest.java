@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.sturdyhelmetgames.roomforchange.entity.Entity.Direction;
+import com.sturdyhelmetgames.roomforchange.entity.Entity.EntityState;
 import com.sturdyhelmetgames.roomforchange.level.Level;
 import com.sturdyhelmetgames.roomforchange.screen.GameScreen;
 
@@ -49,7 +50,7 @@ public class PlayerTest {
 		player.bounds.y = 0;
 		player.drawAttack(spriteBatch);
 				
-		Assert.assertTrue(player.bounds.x == 90f);
+		Assert.assertTrue(player.bounds.x == 180f);
     }
 	
 	@Test
@@ -61,6 +62,15 @@ public class PlayerTest {
 		player.bounds.y = 0;
 		player.drawAttack(spriteBatch);
 				
-		Assert.assertTrue(player.bounds.x == 90f);
+		Assert.assertTrue(player.bounds.x == .8f);
+    }
+	
+	@Test
+    public void drawPlayerFalling() {
+		Player player = new Player(0, 0, level);
+		player.state = EntityState.FALLING;
+		player.drawPlayer(spriteBatch);
+		
+		Assert.assertTrue(player.state == EntityState.FALLING);
     }
 }
