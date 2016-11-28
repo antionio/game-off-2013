@@ -13,7 +13,7 @@ public class Aura extends UsableItem {
 	
 	public void renderGui(int charge, SpriteBatch batch, float posX, float posY){
 		final float scale = getScale();
-		batch.draw(Assets.getGameObject("zombie0"), posX, posY, 0f, 0f, 1f, 1f, scale*0.75f, scale*0.75f, 0f);
+		batch.draw(Assets.getGameObject("perga1"), posX, posY, 0f, 0f, 1f, 1f, scale*0.75f, scale*0.75f, 0f);
 		
 	}
 	
@@ -33,7 +33,7 @@ public class Aura extends UsableItem {
 
 		// calculate scale
 		final float scale = getScale();
-			batch.draw(Assets.getGameObject("zombie0"), bounds.x, bounds.y - 0.65f
+			batch.draw(Assets.getGameObject("perga1"), bounds.x, bounds.y - 0.65f
 					+ zz, 0f, 0f, 1f, 1f, scale, scale, 0f);
 	}
 

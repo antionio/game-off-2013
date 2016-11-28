@@ -3,12 +3,12 @@ format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 Frame
-  rotate: false
-  xy: 208, 48
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
+   rotate: false
+   xy: 208, 48
+   size: 18, 18
+   orig: 18, 18
+   offset: 0, 0
+   index: -1
 bat1
   rotate: false
   xy: 449, 247
@@ -219,13 +219,6 @@ gem
   orig: 18, 18
   offset: 0, 0
   index: -1
-ghost0
-  rotate: false
-  xy: 424, 285
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
 ghost1
   rotate: false
   xy: 328, 285
@@ -371,6 +364,20 @@ hole-7
   xy: 214, 26
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+key-left
+  rotate: false
+  xy: 65, 247
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+key-right
+  rotate: false
+  xy: 65, 266
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 king-snake-left-1
@@ -539,6 +546,27 @@ mummy-left-4
   xy: 471, 207
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+perga1
+  rotate: false
+  xy: 92, 271
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+perga2
+  rotate: false
+  xy: 108, 271
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+perga3
+  rotate: false
+  xy: 124, 271
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 pharao-b1
@@ -800,18 +828,18 @@ rock
   orig: 18, 18
   offset: 0, 0
   index: -1
+rotate: false
+  rotate: false
+  xy: 208, 48
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
 scroll
   rotate: false
   xy: 411, 119
   size: 18, 18
   orig: 18, 18
-  offset: 0, 0
-  index: -1
-skeleton0
-  rotate: false
-  xy: 424, 267
-  size: 16, 16
-  orig: 16, 16
   offset: 0, 0
   index: -1
 skeleton1
@@ -954,18 +982,11 @@ talisman
   orig: 18, 18
   offset: 0, 0
   index: -1
-key-left
+ui-id-994
   rotate: false
-  xy: 99, 85
-  size: 8, 7
-  orig: 8, 7
-  offset: 0, 0
-  index: -1
-key-right
-  rotate: false
-  xy: 106, 85
-  size: 8, 7
-  orig: 8, 7
+  xy: 328, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 win
@@ -975,9 +996,9 @@ win
   orig: 64, 32
   offset: 0, 0
   index: -1
-zombie0
+zombie1
   rotate: false
-  xy: 424, 248
+  xy: 328, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
@@ -1013,13 +1034,6 @@ zombie5
 zombie6
   rotate: false
   xy: 408, 248
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: -1
-zombie1
-  rotate: false
-  xy: 328, 248
   size: 16, 16
   orig: 16, 16
   offset: 0, 0

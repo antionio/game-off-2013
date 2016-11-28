@@ -52,8 +52,8 @@ public class MenuScreen extends Basic2DScreen {
 		
 		if (animation != null)
 			spriteBatch.draw(animation.getKeyFrame(stateTime, true), 2.5f, -0.8f, 0.5f, 0.5f);
-		spriteBatch.draw(Assets.keyLeft.getKeyFrame(0f), 1.8f, -0.8f, 0.5f, 0.5f, 0.5f, 0.5f, 2f, 2f, 0f);
-		spriteBatch.draw(Assets.keyRight.getKeyFrame(0f), 3.2f, -0.8f, 1f, 1f);
+		spriteBatch.draw(Assets.keyLeft.getKeyFrame(0f), 1.8f, -0.8f, 0.5f, 0.5f, 0.5f, 0.5f, 1f, 1f, 0f);
+		spriteBatch.draw(Assets.keyRight.getKeyFrame(0f), 3.2f, -0.8f, 0.5f, 0.5f, 0.5f, 0.5f, 1f, 1f, 0f);
 		
 		spriteBatch.end();
 	}
