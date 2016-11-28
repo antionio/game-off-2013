@@ -34,10 +34,18 @@ public class Player extends Entity {
 	public boolean gotScroll = false;
 	public boolean gotTalisman = false;
 	public boolean gotGem = false;
-
+	
 	public Player(float x, float y, Level level) {
 		super(x, y, 1f, 0.6f, level);
 		direction = Direction.UP;
+	}
+	
+	public float getTryHitTime() {
+		return tryHitTime;
+	}
+
+	public void setTryHitTime(float tryHitTime) {
+		this.tryHitTime = tryHitTime;
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class PackTextures {
 		settings.maxHeight = 1024;
 		settings.paddingX = 4;
 		settings.paddingY = 4;
-		settings.bleed = true;
+		//settings.bleed = true;
 		settings.edgePadding = true;
 		settings.pot = true;
 		TexturePacker2.process(settings, UNPROCESSED_FOLDER, PROCESSED_FOLDER,
