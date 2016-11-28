@@ -143,6 +143,9 @@ public class Assets {
 	public static Animation pharaoFireDown;
 	public static Animation pharaoFireRight;
 	public static Animation pharaoFireLeft;
+	
+	public static Animation keyLeft;
+	public static Animation keyRight;
 
 	
 	public static Animation spiderFront;
@@ -423,6 +426,9 @@ public class Assets {
 		pharaoFireDown.setPlayMode(Animation.LOOP);
 		pharaoFireUp = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-b1"), getGameObject("fire-b2")});
 		pharaoFireUp.setPlayMode(Animation.LOOP);
+		
+		keyRight = new Animation(0.1f, new TextureRegion[] {getGameObject("key-right")});
+		keyLeft = new Animation(0.1f,new TextureRegion[] {getGameObject("key-left")});
 		
 
 		spiderFront = new Animation(0.2f, new TextureRegion[] {

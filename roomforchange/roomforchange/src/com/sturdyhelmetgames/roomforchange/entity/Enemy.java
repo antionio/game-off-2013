@@ -43,6 +43,19 @@ public class Enemy extends Entity {
 				} else if (random < 50) {
 					level.entities.add(new Bomb(bounds.x, bounds.y, level));
 				} else if (random < 100) {
+					level.entities.add(new Aura(bounds.x, bounds.y, level));
+					final int rand = RandomUtil.random(100);
+					if (rand == 1 || rand == 2){
+						//level.entities.add(new Shield(bounds.x, bounds.y, level));
+					} else if (rand == 3 || rand == 4) {
+						
+					} else if (rand == 5 || rand == 6) {
+						
+					} else if (rand == 7 || rand == 8) {
+						
+					} else if (rand == 9 || rand == 10){
+						
+					}
 				}
 			}
 

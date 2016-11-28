@@ -31,6 +31,7 @@ public class Player extends Entity {
 	public final Rectangle hitBounds = new Rectangle(0f, 0f, 0.8f, 0.8f);
 	private float tryHitTime = 0.3f;
 
+	public UsableItem usableItem = null;
 	public boolean gotScroll = false;
 	public boolean gotTalisman = false;
 	public boolean gotGem = false;
@@ -38,6 +39,7 @@ public class Player extends Entity {
 	public Player(float x, float y, Level level) {
 		super(x, y, 1f, 0.6f, level);
 		direction = Direction.UP;
+		this.maxHealth = 5;
 	}
 	
 	public float getTryHitTime() {
@@ -58,6 +60,17 @@ public class Player extends Entity {
 
 		drawAttack(batch);
 
+	}
+	
+	public void useItem(){
+		if (usableItem != null){
+			this.usableItem.useItem(this, level);
+			this.usableItem = null;
+		}
+	}
+	
+	public void pickupItem(UsableItem item) {
+		this.usableItem = item;
 	}
 	
 	public void drawAttack(SpriteBatch batch) {
@@ -199,7 +212,8 @@ public class Player extends Entity {
 	}
 
 	public void gainHealth() {
-		health++;
+		if (health < maxHealth && health > 0)
+			health++;
 	}
 
 	public boolean isInvulnerable() {

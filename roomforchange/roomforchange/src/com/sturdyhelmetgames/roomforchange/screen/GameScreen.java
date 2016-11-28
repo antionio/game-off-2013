@@ -170,6 +170,12 @@ public class GameScreen extends Basic2DScreen {
 					talismanPosY, 0.5f, 0.5f);
 			spriteBatch.setColor(originalColor);
 		}
+		
+		if (player.usableItem != null){
+			final float itemPositionX = camera.position.x + 0.25f - 6f;
+			final float itemPositionY = camera.position.y + 0.25f - 4f;
+			player.usableItem.renderGui(0, spriteBatch, itemPositionX, itemPositionY);
+		}
 
 		spriteBatch.end();
 
@@ -228,7 +234,7 @@ public class GameScreen extends Basic2DScreen {
 				camera.zoom += 0.1f;
 				camera.update();
 			}
-			if (Gdx.input.isKeyPressed(Keys.PLUS)) {
+			if (Gdx.input.isKeyPressed(Keys.PLUS) || Gdx.input.isKeyPressed(Keys.EQUALS)) {
 				camera.zoom -= 0.1f;
 				camera.update();
 			}
@@ -254,6 +260,9 @@ public class GameScreen extends Basic2DScreen {
 		}
 		if (keycode == Keys.X) {
 			level.player.dropBomb();
+		}
+		if (keycode == Keys.SHIFT_LEFT){
+			level.player.useItem();
 		}
 		// if (keycode == Keys.K) {
 		// level.entities.add(new ExplodingBomb(level.player.bounds.x + 2f,
