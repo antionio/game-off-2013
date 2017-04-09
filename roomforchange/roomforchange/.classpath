@@ -4,10 +4,10 @@
 	<classpathentry kind="src" path="src-test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="libs/gdx.jar" sourcepath="libs/gdx-sources.jar"/>
-	<classpathentry kind="lib" path="libs/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="libs/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="libs/mockito-all-1.9.5.jar"/>
-	<classpathentry kind="lib" path="libs/powermock-mockito-1.5.1-full.jar"/>
-	<classpathentry kind="lib" path="libs/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adryano/Documents/GitHub/game-off-2013/Jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adryano/Documents/GitHub/game-off-2013/Jars/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adryano/Documents/GitHub/game-off-2013/Jars/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adryano/Documents/GitHub/game-off-2013/Jars/powermock-mockito-1.5.1-full.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adryano/Documents/GitHub/game-off-2013/Jars/javassist-3.18.1-GA.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

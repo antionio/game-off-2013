@@ -16,10 +16,14 @@ package com.sturdyhelmetgames.roomforchange.level;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
+import com.sturdyhelmetgames.roomforchange.entity.Bat;
+import com.sturdyhelmetgames.roomforchange.entity.Ghost;
 import com.sturdyhelmetgames.roomforchange.entity.KingSpider;
 import com.sturdyhelmetgames.roomforchange.entity.Mummy;
+import com.sturdyhelmetgames.roomforchange.entity.Skeleton;
 import com.sturdyhelmetgames.roomforchange.entity.Snake;
 import com.sturdyhelmetgames.roomforchange.entity.Spider;
+import com.sturdyhelmetgames.roomforchange.entity.Zombie;
 import com.sturdyhelmetgames.roomforchange.level.Level.LevelTileType;
 
 public class RoomTemplate {
@@ -74,19 +78,28 @@ public class RoomTemplate {
 		}
 
 		// randomize room difficulty level
-		int difficultyLevel = MathUtils.random(5);
+		int difficultyLevel = MathUtils.random(3)+2;
 		if (difficultyLevel == 1) {
 			difficultyLevel = 1;
 		}
 		for (int i = 0; i < difficultyLevel; i++) {
 			final int enemyType = MathUtils.random(100);
-			if (enemyType < 30) {
-				entityTypes.add(Mummy.class);
-			} else if (enemyType < 60) {
+
+			if (enemyType < 15) {
 				entityTypes.add(Snake.class);
-			} else if (enemyType < 95) {
+			} else if (enemyType < 25) {
+				entityTypes.add(Mummy.class);
+			} else if (enemyType < 40) {
 				entityTypes.add(Spider.class);
-			} else if (enemyType < 100) {
+			} else if (enemyType < 60) {
+				entityTypes.add(Bat.class);
+			} else if (enemyType < 75) {
+				entityTypes.add(Zombie.class);
+			} else if (enemyType < 90) {
+				entityTypes.add(Skeleton.class);
+			} else if (enemyType < 97) {
+				entityTypes.add(Ghost.class);
+			} else {
 				entityTypes.add(KingSpider.class);
 			}
 		}

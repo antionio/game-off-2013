@@ -1,11 +1,73 @@
-
 objects_all.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 Frame
+   rotate: false
+   xy: 208, 48
+   size: 18, 18
+   orig: 18, 18
+   offset: 0, 0
+   index: -1
+bat1
   rotate: false
-  xy: 208, 48
+  xy: 449, 247
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat2
+  rotate: false
+  xy: 467, 247
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat3
+  rotate: false
+  xy: 485, 247
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat4
+  rotate: false
+  xy: 449, 265
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat5
+  rotate: false
+  xy: 467, 265
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat6
+  rotate: false
+  xy: 485, 265
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat7
+  rotate: false
+  xy: 449, 283
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat8
+  rotate: false
+  xy: 467, 283
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+bat9
+  rotate: false
+  xy: 485, 283
   size: 18, 18
   orig: 18, 18
   offset: 0, 0
@@ -101,6 +163,48 @@ exit
   orig: 18, 18
   offset: 0, 0
   index: -1
+fire-b1
+  rotate: false
+  xy: 178, 311
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-b2
+  rotate: false
+  xy: 194, 311
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-f1
+  rotate: false
+  xy: 148, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-f2
+  rotate: false
+  xy: 164, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-l1
+  rotate: false
+  xy: 180, 246
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+fire-l2
+  rotate: false
+  xy: 180, 262
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 gameover
   rotate: false
   xy: 279, 215
@@ -113,6 +217,48 @@ gem
   xy: 485, 229
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+ghost1
+  rotate: false
+  xy: 328, 285
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ghost2
+  rotate: false
+  xy: 344, 285
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ghost3
+  rotate: false
+  xy: 360, 285
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ghost4
+  rotate: false
+  xy: 376, 285
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ghost5
+  rotate: false
+  xy: 392, 285
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ghost6
+  rotate: false
+  xy: 408, 285
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 ground-1
@@ -218,6 +364,20 @@ hole-7
   xy: 214, 26
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+key-left
+  rotate: false
+  xy: 65, 247
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+key-right
+  rotate: false
+  xy: 65, 266
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 king-snake-left-1
@@ -388,6 +548,90 @@ mummy-left-4
   orig: 18, 18
   offset: 0, 0
   index: -1
+perga1
+  rotate: false
+  xy: 92, 271
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+perga2
+  rotate: false
+  xy: 108, 271
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+perga3
+  rotate: false
+  xy: 124, 271
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-b1
+  rotate: false
+  xy: 247, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-b2
+  rotate: false
+  xy: 263, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-dead
+  rotate: false
+  xy: 311, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-f1
+  rotate: false
+  xy: 215, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-f2
+  rotate: false
+  xy: 231, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-r1
+  rotate: false
+  xy: 279, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pharao-r2
+  rotate: false
+  xy: 295, 265
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-b1
+  rotate: false
+  xy: 246, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-b2
+  rotate: false
+  xy: 262, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 player-back-1
   rotate: false
   xy: 471, 185
@@ -407,6 +651,13 @@ player-back-idle
   xy: 449, 163
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-dead
+  rotate: false
+  xy: 310, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-dying-1
@@ -442,6 +693,20 @@ player-dying-5
   xy: 323, 135
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-f1
+  rotate: false
+  xy: 214, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-f2
+  rotate: false
+  xy: 230, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-falling-1
@@ -486,6 +751,27 @@ player-front-idle
   orig: 18, 18
   offset: 0, 0
   index: -1
+player-knife
+  rotate: false
+  xy: 104, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-knife-d
+  rotate: false
+  xy: 134, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-knife-u
+  rotate: false
+  xy: 88, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 player-left-1
   rotate: false
   xy: 367, 105
@@ -498,6 +784,20 @@ player-left-2
   xy: 389, 127
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+player-r1
+  rotate: false
+  xy: 278, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+player-r2
+  rotate: false
+  xy: 294, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 player-right-1
@@ -528,11 +828,60 @@ rock
   orig: 18, 18
   offset: 0, 0
   index: -1
+rotate: false
+  rotate: false
+  xy: 208, 48
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
 scroll
   rotate: false
   xy: 411, 119
   size: 18, 18
   orig: 18, 18
+  offset: 0, 0
+  index: -1
+skeleton1
+  rotate: false
+  xy: 328, 267
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+skeleton2
+  rotate: false
+  xy: 344, 267
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+skeleton3
+  rotate: false
+  xy: 360, 267
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+skeleton4
+  rotate: false
+  xy: 376, 267
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+skeleton5
+  rotate: false
+  xy: 392, 267
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+skeleton6
+  rotate: false
+  xy: 408, 267
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 snake-back-1
@@ -633,10 +982,59 @@ talisman
   orig: 18, 18
   offset: 0, 0
   index: -1
+ui-id-994
+  rotate: false
+  xy: 328, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 win
   rotate: false
   xy: 279, 179
   size: 64, 32
   orig: 64, 32
+  offset: 0, 0
+  index: -1
+zombie1
+  rotate: false
+  xy: 328, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+zombie2
+  rotate: false
+  xy: 344, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+zombie3
+  rotate: false
+  xy: 360, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+zombie4
+  rotate: false
+  xy: 376, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+zombie5
+  rotate: false
+  xy: 392, 248
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+zombie6
+  rotate: false
+  xy: 408, 248
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1

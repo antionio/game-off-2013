@@ -31,50 +31,49 @@ public class Player extends Entity {
 	public final Rectangle hitBounds = new Rectangle(0f, 0f, 0.8f, 0.8f);
 	private float tryHitTime = 0.3f;
 
+	public UsableItem usableItem = null;
 	public boolean gotScroll = false;
 	public boolean gotTalisman = false;
 	public boolean gotGem = false;
-
+	
 	public Player(float x, float y, Level level) {
 		super(x, y, 1f, 0.6f, level);
 		direction = Direction.UP;
+		this.maxHealth = 5;
+	}
+	
+	public float getTryHitTime() {
+		return tryHitTime;
+	}
+
+	public void setTryHitTime(float tryHitTime) {
+		this.tryHitTime = tryHitTime;
 	}
 
 	@Override
 	public void render(float delta, SpriteBatch batch) {
 		super.render(delta, batch);
 
-		Animation animation = null;
-
 		if (blinkTick < BLINK_TICK_MAX) {
-			if (isFalling()) {
-				animation = Assets.playerFalling;
-				batch.draw(animation.getKeyFrame(dyingAnimState),
-						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-			} else if (isDying() || isDead()) {
-				animation = Assets.playerDying;
-				batch.draw(animation.getKeyFrame(dyingAnimState),
-						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-			} else {
-				if (direction == Direction.UP) {
-					animation = Assets.playerWalkBack;
-				} else if (direction == Direction.DOWN) {
-					animation = Assets.playerWalkFront;
-				} else if (direction == Direction.RIGHT) {
-					animation = Assets.playerWalkRight;
-				} else if (direction == Direction.LEFT) {
-					animation = Assets.playerWalkLeft;
-				}
-				if (isNotWalking()) {
-					batch.draw(animation.getKeyFrame(0.25f), bounds.x - 0.1f,
-							bounds.y, width, height + 0.4f);
-				} else {
-					batch.draw(animation.getKeyFrame(stateTime, true),
-							bounds.x - 0.1f, bounds.y, width, height + 0.4f);
-				}
-			}
+			drawPlayer(batch);
 		}
 
+		drawAttack(batch);
+
+	}
+	
+	public void useItem(){
+		if (usableItem != null){
+			this.usableItem.useItem(this, level);
+			this.usableItem = null;
+		}
+	}
+	
+	public void pickupItem(UsableItem item) {
+		this.usableItem = item;
+	}
+	
+	public void drawAttack(SpriteBatch batch) {
 		if (tryHitTime < 0.3) {
 			float rotation = 0f;
 			float x = this.bounds.x;
@@ -94,7 +93,37 @@ public class Player extends Entity {
 			batch.draw(Assets.hitTarget.getKeyFrame(tryHitTime, true), x, y,
 					1f / 2, 1f / 2, 1f, 1f, 1f, 1f, rotation);
 		}
+	}
 
+	public void drawPlayer(SpriteBatch batch){
+		Animation animation = null;
+		
+		if (isFalling()) {
+			animation = Assets.playerFalling;
+			batch.draw(animation.getKeyFrame(dyingAnimState),
+					bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+		} else if (isDying() || isDead()) {
+			animation = Assets.playerDying;
+			batch.draw(animation.getKeyFrame(dyingAnimState),
+					bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+		} else {
+			if (direction == Direction.UP) {
+				animation = Assets.playerWalkBack;
+			} else if (direction == Direction.DOWN) {
+				animation = Assets.playerWalkFront;
+			} else if (direction == Direction.RIGHT) {
+				animation = Assets.playerWalkRight;
+			} else if (direction == Direction.LEFT) {
+				animation = Assets.playerWalkLeft;
+			}
+			if (isNotWalking()) {
+				batch.draw(animation.getKeyFrame(0.25f), bounds.x - 0.1f,
+						bounds.y, width, height + 0.4f);
+			} else {
+				batch.draw(animation.getKeyFrame(stateTime, true),
+						bounds.x - 0.1f, bounds.y, width, height + 0.4f);
+			}
+		}
 	}
 
 	@Override
@@ -118,7 +147,6 @@ public class Player extends Entity {
 	}
 
 	private static final float HIT_DISTANCE = 0.5f;
-	private final Rectangle leverRect = new Rectangle();
 
 	public void tryHit() {
 		if (!isDying() && !isDead() && !isFalling()) {
@@ -157,7 +185,7 @@ public class Player extends Entity {
 		}
 	}
 
-	private void tryHitLever(int x, int y) {
+	protected void tryHitLever(int x, int y) {
 		LevelTile tile = level.getTiles()[x][y];
 		if (tile.type == Level.LevelTileType.LEVER) {
 			level.gameScreen.openLeverScreen();
@@ -184,7 +212,8 @@ public class Player extends Entity {
 	}
 
 	public void gainHealth() {
-		health++;
+		if (health < maxHealth && health > 0)
+			health++;
 	}
 
 	public boolean isInvulnerable() {

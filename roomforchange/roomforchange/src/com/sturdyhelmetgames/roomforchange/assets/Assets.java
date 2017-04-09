@@ -81,7 +81,29 @@ public class Assets {
 	public static TextureRegion[] fontBigWhite;
 	public static TextureRegion[] fontSmallBlack;
 	public static TextureRegion[] fontSmallWhite;
+	
 
+	public static Animation batWalkFront;
+	public static Animation batWalkBack;
+	public static Animation batWalkLeft;
+	public static Animation batWalkRight;
+	
+	public static Animation zombieWalkFront;
+	public static Animation zombieWalkBack;
+	public static Animation zombieWalkLeft;
+	public static Animation zombieWalkRight;
+	
+	public static Animation skeletonWalkFront;
+	public static Animation skeletonWalkBack;
+	public static Animation skeletonWalkLeft;
+	public static Animation skeletonWalkRight;
+	
+	public static Animation ghostWalkFront;
+	public static Animation ghostWalkBack;
+	public static Animation ghostWalkLeft;
+	public static Animation ghostWalkRight;
+
+	
 	public static Animation mummyWalkFront;
 	public static Animation mummyWalkBack;
 	public static Animation mummyWalkLeft;
@@ -99,6 +121,33 @@ public class Assets {
 	public static Animation playerDying;
 	public static Animation playerFalling;
 
+
+	public static Animation thiefWalkFront;
+	public static Animation thiefWalkBack;
+	public static Animation thiefWalkRight;
+	public static Animation thiefWalkLeft;
+	public static Animation thiefDying;
+	public static Animation thiefFalling;
+	public static Animation thiefKnifeLeft;
+	public static Animation thiefKnifeUp;
+	public static Animation thiefKnifeDown;
+	public static Animation thiefKnifeRight;
+	
+	public static Animation pharaoWalkFront;
+	public static Animation pharaoWalkBack;
+	public static Animation pharaoWalkRight;
+	public static Animation pharaoWalkLeft;
+	public static Animation pharaoDying;
+	public static Animation pharaoFalling;
+	public static Animation pharaoFireUp;
+	public static Animation pharaoFireDown;
+	public static Animation pharaoFireRight;
+	public static Animation pharaoFireLeft;
+	
+	public static Animation keyLeft;
+	public static Animation keyRight;
+
+	
 	public static Animation spiderFront;
 	public static Animation kingSpiderFront;
 
@@ -207,6 +256,57 @@ public class Assets {
 				Texture.class)).split(4, 4)[0];
 		fontSmallWhite = new TextureRegion(get(TEXTURE_FONT_SMALL_WHITE,
 				Texture.class)).split(4, 4)[0];
+		
+
+		batWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("bat1"), getGameObject("bat2"),
+				getGameObject("bat3") });
+		batWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("bat7"), getGameObject("bat8"),
+				getGameObject("bat9") });
+
+		final TextureRegion[] batLeftRegions = new TextureRegion[] {
+				getGameObject("bat4"), getGameObject("bat5"),
+				getGameObject("bat6") };
+		batWalkLeft = new Animation(0.1f, batLeftRegions);
+		batWalkRight = new Animation(0.1f,
+				flipRegionsHorizontally(batLeftRegions));
+		
+		zombieWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("zombie3"), getGameObject("zombie4")});
+		zombieWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("zombie1"), getGameObject("zombie2")});
+
+		final TextureRegion[] zombieLeftRegions = new TextureRegion[] {
+				getGameObject("zombie5"), getGameObject("zombie6")};
+		zombieWalkRight = new Animation(0.1f, zombieLeftRegions);
+		zombieWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(zombieLeftRegions));
+		
+		skeletonWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("skeleton3"), getGameObject("skeleton4")});
+		skeletonWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("skeleton1"), getGameObject("skeleton2")});
+
+		final TextureRegion[] skeletonLeftRegions = new TextureRegion[] {
+				getGameObject("skeleton5"), getGameObject("skeleton6")};
+		skeletonWalkRight = new Animation(0.1f, skeletonLeftRegions);
+		skeletonWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(skeletonLeftRegions));
+		
+		ghostWalkFront = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("ghost3"), getGameObject("ghost4")});
+		ghostWalkBack = new Animation(0.1f, new TextureRegion[] {
+				getGameObject("ghost1"), getGameObject("ghost2")});
+
+		final TextureRegion[] ghostLeftRegions = new TextureRegion[] {
+				getGameObject("ghost5"), getGameObject("ghost6")};
+		ghostWalkRight = new Animation(0.1f, ghostLeftRegions);
+		ghostWalkLeft = new Animation(0.1f,
+				flipRegionsHorizontally(ghostLeftRegions));
+		
+		
+		
 
 		mummyWalkFront = new Animation(0.2f,
 				new TextureRegion[] { getGameObject("mummy-front-1"),
@@ -268,6 +368,68 @@ public class Assets {
 				getGameObject("player-falling-2"),
 				getGameObject("player-falling-3"), getGameObject("empty") });
 		playerFalling.setPlayMode(Animation.NORMAL);
+		
+		
+		
+		thiefWalkFront = new Animation(0.15f, new TextureRegion[] {
+				getGameObject("player-f1"),
+				getGameObject("player-f2"),});
+		thiefWalkBack = new Animation(0.15f, new TextureRegion[] {
+				getGameObject("player-b1"),
+				getGameObject("player-b2"), });
+		thiefWalkRight = new Animation(0.2f, new TextureRegion[] {
+				getGameObject("player-r1"),
+				getGameObject("player-r2"), });
+		thiefWalkLeft = new Animation(0.2f,
+				flipRegionsHorizontally(new TextureRegion[] { getGameObject("player-r1"),
+						getGameObject("player-r2"), }));
+		thiefDying = new Animation(0.3f, new TextureRegion[] {
+				getGameObject("player-dead"), });
+		thiefDying.setPlayMode(Animation.NORMAL);
+
+		thiefFalling = new Animation(0.3f, new TextureRegion[] { getGameObject("empty") });
+		thiefFalling.setPlayMode(Animation.NORMAL);
+		
+		thiefKnifeLeft = new Animation(1f, new TextureRegion[] {getGameObject("player-knife")});
+		thiefKnifeRight = new Animation(1f, flipRegionsHorizontally(
+				new TextureRegion[] {getGameObject("player-knife")}));
+		thiefKnifeUp = new Animation(1f, new TextureRegion[] {getGameObject("player-knife-u")});
+		thiefKnifeDown = new Animation(1f, new TextureRegion[] {getGameObject("player-knife-d")});
+		
+		
+		pharaoWalkFront = new Animation(0.15f, new TextureRegion[] {
+				getGameObject("pharao-f1"),
+				getGameObject("pharao-f2"), });
+		pharaoWalkBack = new Animation(0.15f, new TextureRegion[] {
+				getGameObject("pharao-b1"),
+				getGameObject("pharao-b2"), });
+		pharaoWalkLeft = new Animation(0.2f, flipRegionsHorizontally(new TextureRegion[] {
+				getGameObject("pharao-r1"),
+				getGameObject("pharao-r2"), }));
+		pharaoWalkRight = new Animation(0.2f,
+				new TextureRegion[] { getGameObject("pharao-r1"),
+						getGameObject("pharao-r2"), });
+		pharaoDying = new Animation(0.3f, new TextureRegion[] {
+				getGameObject("pharao-dead"),});
+		pharaoDying.setPlayMode(Animation.NORMAL);
+
+		pharaoFalling = new Animation(0.3f, new TextureRegion[] {
+				 getGameObject("empty") });
+		pharaoFalling.setPlayMode(Animation.NORMAL);
+		
+		pharaoFireLeft = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-l1"), getGameObject("fire-l2")});
+		pharaoFireLeft.setPlayMode(Animation.LOOP);
+		pharaoFireRight = new Animation(0.1f, flipRegionsHorizontally(
+				new TextureRegion[] {getGameObject("fire-l1"), getGameObject("fire-l2")}));
+		pharaoFireRight.setPlayMode(Animation.LOOP);
+		pharaoFireDown = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-f1"), getGameObject("fire-f2")});
+		pharaoFireDown.setPlayMode(Animation.LOOP);
+		pharaoFireUp = new Animation(0.1f, new TextureRegion[] {getGameObject("fire-b1"), getGameObject("fire-b2")});
+		pharaoFireUp.setPlayMode(Animation.LOOP);
+		
+		keyRight = new Animation(0.1f, new TextureRegion[] {getGameObject("key-right")});
+		keyLeft = new Animation(0.1f,new TextureRegion[] {getGameObject("key-left")});
+		
 
 		spiderFront = new Animation(0.2f, new TextureRegion[] {
 				getGameObject("spider-front-1"),
